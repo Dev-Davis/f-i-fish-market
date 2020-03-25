@@ -19,7 +19,7 @@ body
    padding: 1rem;
    border-radius: 9px;
    color: rgb(248, 174, 37);
-   box-shadow: 5px 5px 8px rgb(160, 160, 160);
+   box-shadow: 5px 5px 8px red;
    margin: 2rem;
    font-family: 'Shadows Into Light', cursive;
    font-size: 26px;
