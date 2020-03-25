@@ -1,7 +1,11 @@
+////////// Print to dom //////////
+
 const printToDom = (divId, text) => {
   selectedDiv = document.getElementById(divId);
   selectedDiv.innerHTML += text;
 }
+
+////////// Database Arrays //////////
 
 const fish = [
   {
@@ -143,11 +147,15 @@ const byThePound = [
   }
 ]
 
+////////// Domstring Builders //////////
+
+////////// Fish //////////
+
 const pickfish = () => {
     
   let piscado = '';
 
-  piscado += '<h3><span class="cat-title">FISH</span></h3>'
+  piscado += '<h3 id="cat-title">FISH</h3>'
   piscado += '<p class="extras">Mixed Fish - $1.00 extra</p>'
   for(let i = 0; i < fish.length; i++) {
       piscado += '<div class="fish-opt">'
@@ -161,10 +169,12 @@ const pickfish = () => {
   printToDom('fish', piscado);
 }
 
+////////// Meats and Sides //////////
+
 const meatAndSides = () => {
   let mAs = '';
 
-  mAs += '<h3 class="cat-title">Meat and Sides</h3>'
+  mAs += '<h3 id="cat-title">Meat and Sides</h3>'
   for(let i = 0; i < meatsAndSides.length; i++) {
     mAs += '<div class="meat-and-sides">'
     mAs += `<p>${meatsAndSides[i].name}</p>`
@@ -174,10 +184,12 @@ const meatAndSides = () => {
   printToDom('meats-sides', mAs);
 }
 
+////////// Sides //////////
+
 const theSides = () => {
   let sydes = '';
   
-  sydes += '<h3 class="cat-title">Sides</h3>'
+  sydes += '<h3 id="cat-title">Sides</h3>'
   for( let s = 0; s < sides.length; s++) {
     sydes += '<div>'
     sydes += `<p>${sides[s].name}</p>`
@@ -186,9 +198,11 @@ const theSides = () => {
   printToDom('sides', sydes)
 }
 
+////////// Quantity Sides //////////
+
 const quantitySide = () => {
   let quanity = '';
-  quanity += '<h3 class="sub-title">Side Quantity</h3>'
+  quanity += '<h3 id="cat-title">Side Quantity</h3>'
   for(let q = 0; q < sideQuantity.length; q++) {
     quanity += '<div>'
     quanity += `<p>${sideQuantity[q].name} - $${sideQuantity[q].price}</p>`
@@ -197,10 +211,12 @@ const quantitySide = () => {
   printToDom('sides', quanity)
 }
 
+////////// Drinks //////////
+
 const dranks = () => {
   let bev = '';
   
-  bev += '<h3 class="sub-title">Drinks</h3>'
+  bev += '<h3 id="cat-title">Drinks</h3>'
   for (let d = 0; d < drinks.length; d++) {
     bev += '<div>'
     bev += `<p>${drinks[d].name} - $${drinks[d].price} - <img src="${drinks[d].drinkPic}" class="drink-pic" /></p>`
@@ -209,10 +225,12 @@ const dranks = () => {
   printToDom('drinks', bev)
 }
 
+////////// Fish by the Pound //////////
+
 const fishPound = () => {
   let pound = '';
 
-  pound += '<h3 class="sub-title">Fish by the Pound</h3>'
+  pound += '<h3 id="cat-title">Fish by the Pound</h3>'
   for (let lb = 0; lb < byThePound.length; lb++) {
     pound += '<div>'
     pound += `<p>${byThePound[lb].name} - $${byThePound[lb].price}</p>`
