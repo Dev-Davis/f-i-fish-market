@@ -155,8 +155,8 @@ const pickfish = () => {
     
   let piscado = '';
 
-  piscado += '<h3 id="cat-title">FISH</h3>'
-  piscado += '<p class="extras">Mixed Fish - $1.00 extra</p>'
+      piscado += '<h3 id="cat-title">FISH</h3>'
+      piscado += '<p class="extras">Mixed Fish - $1.00 extra</p>'
   for(let i = 0; i < fish.length; i++) {
       piscado += '<div class="fish-opt">'
       piscado += `<p>${fish[i].name}</p>`
@@ -238,6 +238,8 @@ const fishPound = () => {
   }
   printToDom('fish-by-the-pound', pound)
 }
+
+
 
 init = () => {
   pickfish();
